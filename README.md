@@ -9,3 +9,5 @@ Each project in this repository explores how AI tools and carefully written prom
 - `landing-page-using-codex` - Fern & Clay, an editorial landing page for an independent plant shop and greenhouse.
 
 More AI-built websites and prompt experiments will be added over time.
+
+inspiration from this workshop https://github.com/katia-openai/master-dev-workshop
