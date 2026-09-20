@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Fern and Clay landing page preview</title>
+  <desc id="desc">A simple green and clay illustration of a plant shop landing page.</desc>
+  <rect width="1200" height="620" fill="#f3efe7"/>
+  <rect width="1200" height="390" fill="#173a2c"/>
+  <path d="M0 390h1200v230H0z" fill="#e7dfd1"/>
+  <path d="M0 0h1200v390H0z" fill="#173a2c" opacity=".12"/>
+  <g fill="none" stroke="#b3985c" stroke-width="2" opacity=".45">
+    <path d="M90 0v390M290 0v390M490 0v390M690 0v390M890 0v390M1090 0v390"/>
+    <path d="M0 90h1200M0 190h1200M0 290h1200"/>
+  </g>
+  <text x="88" y="72" fill="#f3efe7" font-family="Georgia, serif" font-size="22" letter-spacing="3">FERN &amp; CLAY</text>
+  <text x="88" y="184" fill="#f3efe7" font-family="Georgia, serif" font-size="76">Plants for</text>
+  <text x="88" y="270" fill="#e0d1b4" font-family="Georgia, serif" font-size="76" font-style="italic">slow living.</text>
+  <rect x="88" y="310" width="170" height="42" fill="none" stroke="#f3efe7"/>
+  <text x="111" y="337" fill="#f3efe7" font-family="Arial, sans-serif" font-size="12" letter-spacing="2">SEE WHAT'S IN  ↗</text>
+  <g transform="translate(870 175)">
+    <path d="M104 205c-5-75-2-128 16-183" fill="none" stroke="#b3985c" stroke-width="8"/>
+    <path d="M116 100C55 90 15 45 26 0c54 8 88 43 90 100ZM119 126c46-20 91-10 112 25-37 33-78 27-112-25ZM111 69C75 38 73 2 92-30c37 22 43 57 19 99Z" fill="#7d9b64"/>
+    <path d="M63 204h116l-15 75H78z" fill="#ae6551"/>
+    <path d="M63 204h116" stroke="#f3efe7" stroke-width="8" opacity=".6"/>
+  </g>
+  <text x="88" y="475" fill="#173a2c" font-family="Georgia, serif" font-size="35">A neighbourhood plant shop</text>
+  <text x="88" y="520" fill="#59665b" font-family="Arial, sans-serif" font-size="17">Grown with care, chosen for London homes.</text>
+  <circle cx="1080" cy="510" r="55" fill="#ae6551"/>
+  <text x="1047" y="505" fill="#f3efe7" font-family="Georgia, serif" font-size="16">LOCALLY</text>
+  <text x="1054" y="528" fill="#f3efe7" font-family="Georgia, serif" font-size="16">GROWN</text>
+</svg>
