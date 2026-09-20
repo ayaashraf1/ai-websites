@@ -1,0 +1,1 @@
+create new Nextjs website in new folder called restaurant website, this website should be classy website for itallian food called italiano, choose dark colors make it more profestional, create landing page and page for item and about us page that contain some info about the history of the resturant and the staff make sure the header and footer are very catchy and impressive
