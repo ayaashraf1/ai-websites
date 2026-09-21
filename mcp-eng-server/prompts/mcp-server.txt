@@ -1,0 +1,3 @@
+Building a real MCP server makes Copilot system-aware: it can look up real Jira tickets, summarise real PRs, query real internal APIs — from inside your IDE. This is the next frontier of AI-assisted engineering and the lab that most impresses technical leadership.
+
+a TypeScript MCP server exposing 3 tools: (1) Jira ticket lookup — given a ticket ID return title, description, status, assignee, (2) GitHub PR summariser — given a PR number return structured summary with decisions made, (3) Internal API wrapper — expose one of your team's internal REST APIs. Connect to VS Code Copilot. Test with 5 real queries. Document tool schemas.

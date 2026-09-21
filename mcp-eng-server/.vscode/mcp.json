@@ -1,0 +1,23 @@
+{
+  "inputs": [
+    { "id": "jiraEmail", "type": "promptString", "description": "Jira account email" },
+    { "id": "jiraToken", "type": "promptString", "description": "Jira API token", "password": true },
+    { "id": "githubToken", "type": "promptString", "description": "GitHub PAT (repo scope)", "password": true },
+    { "id": "internalApiToken", "type": "promptString", "description": "Internal API token", "password": true }
+  ],
+  "servers": {
+    "eng-mcp-server": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/dist/src/index.js"],
+      "env": {
+        "JIRA_BASE_URL": "https://your-org.atlassian.net",
+        "JIRA_EMAIL": "${input:jiraEmail}",
+        "JIRA_API_TOKEN": "${input:jiraToken}",
+        "GITHUB_TOKEN": "${input:githubToken}",
+        "INTERNAL_API_BASE_URL": "https://internal-api.your-org.dev",
+        "INTERNAL_API_TOKEN": "${input:internalApiToken}"
+      }
+    }
+  }
+}
