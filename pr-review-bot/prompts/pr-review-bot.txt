@@ -1,0 +1,4 @@
+Build an AI PR review bot provides systematic first-pass review on every PR across any codebase: security vulnerabilities, logic errors, missing tests, API contract issues. Stack-agnostic: the GitHub Actions workflow triggers on any language.
+
+
+a GitHub Actions workflow: triggers on PR open or update, uses Copilot code review to analyse the diff, posts a structured comment covering security, logic correctness, test coverage, and maintainability. Test on 3 real PRs. Tune prompts until it catches real issues without excessive false positives.

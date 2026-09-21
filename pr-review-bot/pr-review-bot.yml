@@ -1,0 +1,56 @@
+name: AI PR Review Bot
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  request-copilot-review:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request Copilot code review
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          OWNER="${{ github.repository_owner }}"
+          REPO="${{ github.event.repository.name }}"
+          PR="${{ github.event.pull_request.number }}"
+
+          echo "Requesting Copilot review on $OWNER/$REPO#$PR"
+
+          # Standard, stable endpoint: request copilot-pull-request-reviewer[bot]
+          # as a reviewer. This triggers the same Copilot code review engine
+          # that reads .github/copilot-instructions.md for repo-specific rules.
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            /repos/"$OWNER"/"$REPO"/pulls/"$PR"/requested_reviewers \
+            -f "reviewers[]=copilot-pull-request-reviewer[bot]" \
+            || echo "Copilot may already be a reviewer or review already requested — continuing."
+
+      - name: Post review checklist comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          OWNER="${{ github.repository_owner }}"
+          REPO="${{ github.event.repository.name }}"
+          PR="${{ github.event.pull_request.number }}"
+
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            /repos/"$OWNER"/"$REPO"/issues/"$PR"/comments \
+            -f body="🤖 **Copilot review requested.** Once posted, it will cover:
+
+- 🔒 **Security** — injection, secrets, unsafe deserialization, auth/authz gaps
+- 🧠 **Logic correctness** — edge cases, off-by-one, race conditions, null/undefined handling
+- 🧪 **Test coverage** — missing tests for new/changed logic, untested error paths
+- 🛠️ **Maintainability** — duplication, naming, complexity, API contract breaks
+
+Review rules live in \`.github/copilot-instructions.md\`. False positive or missed issue? React 👎/👍 on Copilot's comment or open an issue against that file to tune the prompt."
