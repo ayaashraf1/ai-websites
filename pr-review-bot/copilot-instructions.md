@@ -33,6 +33,10 @@ pad with generic praise.
   reflect the new behavior.
 - Flag missing tests for previously-untested failure modes introduced by
   this change (network failure, empty state, malformed input).
+- Report the available test coverage evidence for each affected component,
+  including the coverage result and the command or artifact used to verify it.
+- Flag missing or unverified production error handling for each affected
+  component, including user-visible failures, logging, and recovery behavior.
 - Do not require tests for pure refactors, config, or docs-only changes.
 
 ## 🛠️ Maintainability & API Contracts
@@ -48,6 +52,9 @@ pad with generic praise.
 
 ## General rules
 - Prioritize **signal over volume**: 3 real issues beat 15 nitpicks.
+- Include a verification checklist with evidence for every affected component.
+  Mark each item verified, failed, or unavailable, and identify the relevant
+  test, coverage report, command, or code path.
 - Every comment must state *why* it matters (impact), not just *what* to
   change.
 - Where possible, suggest a concrete fix, not just a description of the

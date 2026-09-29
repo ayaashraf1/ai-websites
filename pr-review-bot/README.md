@@ -33,7 +33,8 @@ The workflow requests these permissions:
 1. Add the files at the paths above and push them to the default branch.
 2. Open or update a non-draft pull request.
 3. The workflow requests `copilot-pull-request-reviewer[bot]` and adds a
-   checklist comment to the pull request.
+   checklist comment covering security, logic correctness, test coverage,
+   production error handling, verification evidence, and maintainability.
 4. Copilot posts its review on the pull request when the review is ready.
 
 Draft pull requests are ignored until they are marked ready for review.
@@ -42,8 +43,11 @@ Draft pull requests are ignored until they are marked ready for review.
 
 Edit `.github/copilot-instructions.md` in the target repository. The included
 instructions organize findings under Security, Logic Correctness, Test
-Coverage, and Maintainability & API Contracts. Keep the instructions focused on
-the behavior and risks that matter for your codebase.
+Coverage, and Maintainability & API Contracts. For every affected component,
+the review also requires a verification checklist with evidence, available
+test coverage results and their source, and production error-handling evidence
+covering user-visible failures, logging, and recovery behavior. Keep the
+instructions focused on the behavior and risks that matter for your codebase.
 
 ## Troubleshooting
 

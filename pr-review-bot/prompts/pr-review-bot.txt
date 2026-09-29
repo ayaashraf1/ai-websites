@@ -2,3 +2,20 @@ Build an AI PR review bot provides systematic first-pass review on every PR acro
 
 
 a GitHub Actions workflow: triggers on PR open or update, uses Copilot code review to analyse the diff, posts a structured comment covering security, logic correctness, test coverage, and maintainability. Test on 3 real PRs. Tune prompts until it catches real issues without excessive false positives.
+
+
+
+Add verification checklist evidence per component, 
+test coverage report and production error handling 
+demonstrated to pr-review-bot and don't do anything extra
+
+create video.mov demo in new file for PR-review-bot that 
+clarify how to use this bot in any project and tell us 
+summary of the project and benefit of it, make sure 
+this demo don't exceed 10min and fon't do anything extra
+
+it's black screen no voice no screen no text please fix that and 
+add subtitle if not capable to add voice
+
+better but make each slide 5second and add screenshot or example of 
+how the bot will be and thanks slide at the end and don't do anything extra

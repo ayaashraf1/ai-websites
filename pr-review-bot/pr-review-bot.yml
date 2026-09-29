@@ -48,9 +48,11 @@ jobs:
             /repos/"$OWNER"/"$REPO"/issues/"$PR"/comments \
             -f body="🤖 **Copilot review requested.** Once posted, it will cover:
 
-- 🔒 **Security** — injection, secrets, unsafe deserialization, auth/authz gaps
-- 🧠 **Logic correctness** — edge cases, off-by-one, race conditions, null/undefined handling
-- 🧪 **Test coverage** — missing tests for new/changed logic, untested error paths
-- 🛠️ **Maintainability** — duplication, naming, complexity, API contract breaks
+          - 🔒 **Security** — injection, secrets, unsafe deserialization, auth/authz gaps
+          - 🧠 **Logic correctness** — edge cases, off-by-one, race conditions, null/undefined handling
+          - 🧪 **Test coverage** — coverage report and evidence for each affected component
+          - 🚨 **Production error handling** — user-visible failures, logging, and recovery paths
+          - ✅ **Verification checklist** — evidence-backed status for each affected component
+          - 🛠️ **Maintainability** — duplication, naming, complexity, API contract breaks
 
-Review rules live in \`.github/copilot-instructions.md\`. False positive or missed issue? React 👎/👍 on Copilot's comment or open an issue against that file to tune the prompt."
+          Review rules live in \`.github/copilot-instructions.md\`. False positive or missed issue? React 👎/👍 on Copilot's comment or open an issue against that file to tune the prompt."
