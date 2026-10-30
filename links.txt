@@ -1,0 +1,3 @@
+https://sgoldfarb2.github.io/practical-prompt-engineering/lessons/core-prompting-techniques/few-shot
+
+https://github.com/sgoldfarb2-fem/practical-prompt-engineering-code-exercise/tree/reference-project

@@ -1,0 +1,3 @@
+Build an MCP server called weather-service with a single that takes a
+city name and return mock weather data. store it in the folder 
+i attached to this request

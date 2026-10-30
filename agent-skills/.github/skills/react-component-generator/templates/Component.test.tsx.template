@@ -1,0 +1,29 @@
+import { describe, expect, it, vi } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { __COMPONENT_NAME__ } from './__COMPONENT_NAME__';
+
+// Minimal valid props; extend per the component's Props interface.
+const defaultProps = {
+  // __DEFAULT_PROPS__
+};
+
+describe('__COMPONENT_NAME__', () => {
+  it('renders without crashing', () => {
+    render(<__COMPONENT_NAME__ {...defaultProps} />);
+    // __SMOKE_ASSERTION__
+  });
+
+  // __REQUIRED_PROP_TESTS__
+
+  // __OPTIONAL_PROP_TESTS__
+
+  // __CALLBACK_TESTS__
+
+  it('applies a custom className to the root element', () => {
+    const { container } = render(
+      <__COMPONENT_NAME__ {...defaultProps} className="custom" />
+    );
+    expect(container.firstChild).toHaveClass('custom');
+  });
+});
